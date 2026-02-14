@@ -1,5 +1,11 @@
 default:
     @just --list
 
-sync:
-    ./scripts/sync_all.sh
+build:
+    ./scripts/build.sh
+
+release:
+    ./scripts/create_release.sh
+
+publish version:
+    ./scripts/publish.sh {{version}}
