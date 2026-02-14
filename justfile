@@ -5,7 +5,7 @@ build:
     ./scripts/build.sh
 
 release:
-    ./scripts/create_release.sh
+    ./scripts/release.sh
 
 publish version:
     ./scripts/publish.sh {{version}}
