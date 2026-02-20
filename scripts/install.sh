@@ -43,15 +43,15 @@ detect_platform() {
 
 # Get the latest release version
 get_latest_version() {
-    LATEST_VERSION=$(curl -s https://api.github.com/repos/AxiomCore/cli/releases/latest | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+    # LATEST_VERSION=$(curl -s https://api.github.com/repos/AxiomCore/cli/releases/latest | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
     
-    if [ -z "$LATEST_VERSION" ]; then
-        echo -e "${RED}Failed to fetch latest version${NC}"
-        exit 1
-    fi
+    # if [ -z "$LATEST_VERSION" ]; then
+    #     echo -e "${RED}Failed to fetch latest version${NC}"
+    #     exit 1
+    # fi
     
     # Remove 'v' prefix if present
-    VERSION="${LATEST_VERSION#v}"
+    VERSION="0.0.65"
 }
 
 # Download and install binary
